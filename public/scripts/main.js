@@ -1,5 +1,11 @@
-"use strict";
+'use strict';
 
-var ohHey = "Hello World";
+$(function () {
+    console.log('ready');
+});
 
-console.log(ohHey);
+$('ul img').on('click', function () {
+    var src = $(this).attr('data-main');
+    console.log(src);
+    $('img#main').attr('src', src);
+});
